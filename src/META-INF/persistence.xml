@@ -1,0 +1,21 @@
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+   http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="my-app" transaction-type="RESOURCE_LOCAL">
+    
+    	
+        <class>com.mysql.Todo</class>
+        
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/testDB"/>
+            <property name="javax.persistence.jdbc.user" value="ecogle"/>
+            <property name="javax.persistence.jdbc.password" value="F22R@ptor"/>
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.logging.level" value="INFO"/>
+            
+        </properties>
+    </persistence-unit>
+</persistence>

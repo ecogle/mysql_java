@@ -3,5 +3,12 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/home/ecogle/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/jakarta.persistence.source_2.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/jakarta.persistence_2.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen.source_2.7.4.v20190115-ad5b7c6b2a.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen_2.7.4.v20190115-ad5b7c6b2a.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/org.eclipse.persistence.jpars.source_2.7.4.v20190115-ad5b7c6b2a.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/jpa/org.eclipse.persistence.jpars_2.7.4.v20190115-ad5b7c6b2a.jar"/>
+	<classpathentry kind="lib" path="/home/ecogle/eclipselink/jlib/eclipselink.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
