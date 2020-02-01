@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+	<mysql>
+		<host>localhost</host>
+		<port>3307</port>
+		<username></username>
+		<oassword></oassword>
+	</mysql>
+	<postgresql>
+		<host>localhost</host>
+		<port>5432</port>
+		<username>ecogle</username>
+		<password>F22R@ptor</password>
+		<database>TestDB</database>
+	</postgresql>
+</server>
