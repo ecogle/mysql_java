@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.postgresql.jdbc3.Jdbc3PoolingDataSource;
+
 import com.DB;
 import com.DatabaseQuery;
 import com.mysql.MySQLQuery;
@@ -16,12 +18,10 @@ public class DBTest {
 			
 	public static void main (String[] args) throws SQLException {
 		
-		Config config = new Config(Config.DB_TYPES.POSTGRES);
-	
+		Config config = new Config(Config.DB_TYPES.MYSQL);
+		
 		try(Connection conn = DriverManager.getConnection(config.getURL(),config.getUsername(),config.getPassword())){
 						
-			Statement stmt = conn.createStatement();
-			String sel = null;
 			DatabaseQuery query = null;
 			if(config.getType() == DB_TYPES.MYSQL) {
 				query = new MySQLQuery(conn);			}
