@@ -2,11 +2,15 @@ package com.pgsql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.DB;
+import com.DatabaseQuery;
+import com.mysql.MySQLQuery;
+
 import tools.Config;
+import tools.Config.DB_TYPES;
 
 public class DBTest {
 			
@@ -17,15 +21,18 @@ public class DBTest {
 		try(Connection conn = DriverManager.getConnection(config.getURL(),config.getUsername(),config.getPassword())){
 						
 			Statement stmt = conn.createStatement();
+			String sel = null;
+			DatabaseQuery query = null;
+			if(config.getType() == DB_TYPES.MYSQL) {
+				query = new MySQLQuery(conn);			}
+			else
+			{
+				query = new PostgresQuery(conn);
+			}			
 			
-			String sel = "SELECT site_id, name FROM sites";
-			
-			try(ResultSet rs = stmt.executeQuery(sel)){
-				while(rs.next()) {
-					System.out.println(rs.getString("site_id") + " " + rs.getString("name"));
-				}
-			}
-		} catch (Exception e) {
+			DB.doQuery(query);
+		}
+		 catch (SQLException e) {
 			
 			e.printStackTrace();
 		}

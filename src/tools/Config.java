@@ -102,6 +102,10 @@ public class Config {
 		
 		return url.toString();
 	}
+
+	public DB_TYPES getType() {
+		return type;
+	}
 	
 	
 	

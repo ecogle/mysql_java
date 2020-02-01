@@ -2,9 +2,10 @@
 <server>
 	<mysql>
 		<host>localhost</host>
-		<port>3307</port>
-		<username></username>
-		<oassword></oassword>
+		<port>3306</port>
+		<username>ecogle</username>
+		<password>F22R@ptor</password>
+		<database>testDB?useSSL=false</database>
 	</mysql>
 	<postgresql>
 		<host>localhost</host>
