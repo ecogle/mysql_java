@@ -18,13 +18,11 @@ public class Config {
 	private String username;
 	private String password;
 	private String database;
-	DB_TYPES type;
+	private DB_TYPES type;
 	
 	public Config(DB_TYPES dbtype) {
 		this.type = dbtype;
-		initialize(dbtype.getName());
-		
-		
+		initialize(dbtype.getName());		
 	}
 	
 	private void initialize(String dbtype) {
@@ -43,9 +41,6 @@ public class Config {
 			for(int x = 0; x < nodes.getLength(); x ++)
 			{
 				Node node = nodes.item(x);
-				
-				
-				
 				
 				System.out.println(node.getNodeName());
 				if(node.getNodeType() == Node.ELEMENT_NODE) {
